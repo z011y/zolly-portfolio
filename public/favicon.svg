@@ -1,0 +1,17 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- <style>
+  rect {
+    fill: #EDF6FF;
+    stroke: #CEE7FE;
+  }
+  @media (prefers-color-scheme: dark) {
+    rect {
+      fill: #232323;
+      stroke: #2e2e2e;
+    }
+  }
+</style> -->
+<rect x="0.5" y="0.5" width="23" height="23" rx="5.5" fill="#EDF6FF" stroke="#CEE7FE"/>
+<circle cx="12" cy="8" r="3" fill="#0091FF"/>
+<circle cx="12" cy="16" r="3" fill="#0091FF"/>
+</svg>
