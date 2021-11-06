@@ -31,4 +31,8 @@ const LinkWrapper = styled("div", {
   display: "grid",
   gridTemplateColumns: "auto 1fr",
   gridGap: "16px",
+
+  "&:hover": {
+    cursor: "pointer",
+  },
 });
