@@ -21,6 +21,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700;900&display=swap"
             rel="stylesheet"
           />
+          <link rel="icon" href="/favicon.ico" />
 
           {/* <link rel="mask-icon" href="mask-icon.svg" color="#000000" />
           <link rel="apple-touch-icon" href="apple-touch-icon.png" />
