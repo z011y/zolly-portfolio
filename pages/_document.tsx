@@ -22,11 +22,6 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="icon" href="/favicon.ico" />
-
-          {/* <link rel="mask-icon" href="mask-icon.svg" color="#000000" />
-          <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-          <link rel="manifest" href="manifest.json" />
-          <meta name="theme-color" content="#000000" /> */}
         </Head>
         <body>
           <Main />

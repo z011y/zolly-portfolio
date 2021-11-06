@@ -47,7 +47,7 @@ const MobileNav = () => {
 export default MobileNav;
 
 const MobileNavContainer = styled("div", {
-  height: "32px",
+  height: "64px",
   width: "100%",
   maxWidth: "100%",
   overflowX: "scroll",

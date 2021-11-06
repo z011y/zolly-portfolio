@@ -31,11 +31,19 @@ const LinkWrapper = styled("div", {
   display: "grid",
   gridTemplateColumns: "auto 1fr",
   gridGap: "4px",
-  marginRight: "32px",
+  marginRight: "16px",
+  backgroundColor: "$accent",
+  border: "1px solid $border",
+  borderRadius: "16px",
+  padding: "4px 8px",
 
   "@bp1": {
     gridGap: "16px",
     marginRight: "0",
+    borderRadius: "8px",
+    padding: "0",
+    backgroundColor: "$background",
+    border: "none",
 
     "&:hover": {
       cursor: "pointer",

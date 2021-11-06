@@ -33,9 +33,19 @@ const ThemeToggleContainer = styled("div", {
   left: "32px",
   cursor: "pointer",
   zIndex: 2,
+  backgroundColor: "$accent",
+  border: "1px solid $border",
+  padding: "8px",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  borderRadius: "8px",
 
   "@bp1": {
     bottom: "64px",
     left: "64px",
+    backgroundColor: "$background",
+    border: "none",
+    padding: "0",
   },
 });
