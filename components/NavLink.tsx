@@ -37,6 +37,10 @@ const LinkWrapper = styled("div", {
   borderRadius: "16px",
   padding: "4px 8px",
 
+  a: {
+    fontSize: "14px",
+  },
+
   "@bp1": {
     gridGap: "16px",
     marginRight: "0",
@@ -47,6 +51,10 @@ const LinkWrapper = styled("div", {
 
     "&:hover": {
       cursor: "pointer",
+    },
+
+    a: {
+      fontSize: "18px",
     },
   },
 });

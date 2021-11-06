@@ -19,26 +19,26 @@ const MobileNav = () => {
       <NavLink
         href="/"
         text="Home"
-        icon={<House size="24" />}
-        activeIcon={<HouseSimple color="#0091FF" weight="fill" size="24" />}
+        icon={<House size="18" />}
+        activeIcon={<HouseSimple color="#0091FF" weight="fill" size="18" />}
       />
       <NavLink
         href="/work"
         text="Work"
-        icon={<Folder size="24" />}
-        activeIcon={<FolderOpen color="#0091FF" weight="fill" size="24" />}
+        icon={<Folder size="18" />}
+        activeIcon={<FolderOpen color="#0091FF" weight="fill" size="18" />}
       />
       <NavLink
         href="/me"
         text="Me"
-        icon={<Smiley size="24" />}
-        activeIcon={<SmileyXEyes color="#0091FF" weight="fill" size="24" />}
+        icon={<Smiley size="18" />}
+        activeIcon={<SmileyXEyes color="#0091FF" weight="fill" size="18" />}
       />
       <NavLink
         href="/hello"
         text="Hello"
-        icon={<ChatTeardropText size="24" />}
-        activeIcon={<ChatTeardrop color="#0091FF" weight="fill" size="24" />}
+        icon={<ChatTeardropText size="18" />}
+        activeIcon={<ChatTeardrop color="#0091FF" weight="fill" size="18" />}
       />
     </MobileNavContainer>
   );
@@ -47,7 +47,7 @@ const MobileNav = () => {
 export default MobileNav;
 
 const MobileNavContainer = styled("div", {
-  height: "64px",
+  height: "48px",
   width: "100%",
   maxWidth: "100%",
   overflowX: "scroll",
@@ -56,6 +56,7 @@ const MobileNavContainer = styled("div", {
   display: "flex",
   alignItems: "center",
   paddingLeft: "32px",
+  paddingRight: "16px",
 
   "&::-webkit-scrollbar": {
     display: "none",
