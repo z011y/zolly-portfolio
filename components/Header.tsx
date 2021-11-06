@@ -26,12 +26,17 @@ const HeaderContainer = styled("div", {
   position: "fixed",
   top: 0,
   left: 0,
-  width: "calc(100% - 116px)",
+  width: "100vw",
+  maxWidth: "100%",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  padding: "$5",
+  padding: "$4",
   zIndex: "2",
+
+  "@bp1": {
+    padding: "$5",
+  },
 });
 
 const SocialsWrapper = styled("div", {

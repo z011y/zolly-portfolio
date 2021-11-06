@@ -43,7 +43,7 @@ export const {
     },
   },
   media: {
-    bp1: "(min-width: 414px)",
+    bp1: "(min-width: 415px)",
     dark: "(prefers-color-scheme: dark)",
   },
 });
@@ -59,10 +59,27 @@ export const darkTheme = createTheme({
 });
 
 export const globalStyles = globalCss({
+  "*": {
+    boxSizing: "border-box",
+  },
+  html: {
+    width: "100%",
+    maxWidth: "100%",
+  },
   body: {
+    width: "100%",
+    maxWidth: "100%",
     margin: 0,
     fontFamily: theme.fonts.normal,
     backgroundColor: theme.colors.background,
+  },
+  __next: {
+    width: "100%",
+    maxWidth: "100%",
+  },
+  "__next > div": {
+    width: "100%",
+    maxWidth: "100%",
   },
   a: {
     fontFamily: theme.fonts.mono,

@@ -57,7 +57,7 @@ const SideBarContainer = styled("div", {
   flexDirection: "column",
   alignItems: "start",
   justifyContent: "center",
-  height: "calc(100vh - 128px)",
+  height: "100%",
   borderRight: "solid 1px $border",
   position: "fixed",
   top: 0,
