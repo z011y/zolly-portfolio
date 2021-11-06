@@ -5,7 +5,7 @@ type LogoProps = {
   height: number;
 };
 
-export const Logo = ({ fillColor, strokeColor, width, height }: LogoProps) => {
+const Logo = ({ fillColor, strokeColor, width, height }: LogoProps) => {
   return (
     <svg
       width={width || 24}
@@ -27,3 +27,5 @@ export const Logo = ({ fillColor, strokeColor, width, height }: LogoProps) => {
     </svg>
   );
 };
+
+export default Logo;

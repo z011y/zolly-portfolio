@@ -30,9 +30,15 @@ export default NavLink;
 const LinkWrapper = styled("div", {
   display: "grid",
   gridTemplateColumns: "auto 1fr",
-  gridGap: "16px",
+  gridGap: "4px",
+  marginRight: "32px",
 
-  "&:hover": {
-    cursor: "pointer",
+  "@bp1": {
+    gridGap: "16px",
+    marginRight: "0",
+
+    "&:hover": {
+      cursor: "pointer",
+    },
   },
 });

@@ -29,8 +29,13 @@ export default ThemeToggle;
 
 const ThemeToggleContainer = styled("div", {
   position: "fixed",
-  bottom: "64px",
-  left: "64px",
+  bottom: "32px",
+  left: "32px",
   cursor: "pointer",
   zIndex: 2,
+
+  "@bp1": {
+    bottom: "64px",
+    left: "64px",
+  },
 });

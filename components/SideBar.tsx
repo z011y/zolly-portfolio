@@ -53,17 +53,21 @@ const SideBar = () => {
 export default SideBar;
 
 const SideBarContainer = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "start",
-  justifyContent: "center",
-  height: "100%",
-  borderRight: "solid 1px $border",
-  position: "fixed",
-  top: 0,
-  left: 0,
-  padding: "$5",
-  zIndex: 1,
+  display: "none",
+
+  "@bp1": {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "start",
+    justifyContent: "center",
+    height: "100%",
+    borderRight: "solid 1px $border",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    padding: "$5",
+    zIndex: 1,
+  },
 });
 
 const LinksWrapper = styled("div", {

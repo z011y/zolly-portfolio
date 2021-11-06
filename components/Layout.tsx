@@ -1,6 +1,6 @@
 import React from "react";
 
-import Header from "./Header";
+import Navigation from "./Navigation";
 import SideBar from "./SideBar";
 import ThemeToggle from "./ThemeToggle";
 
@@ -11,7 +11,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div>
-      <Header />
+      <Navigation />
       <SideBar />
       <ThemeToggle />
       {children}
