@@ -64,6 +64,7 @@ const MobileNavContainer = styled("div", {
   alignItems: "center",
   paddingLeft: "32px",
   paddingRight: "16px",
+  backgroundColor: "$background",
 
   "&::-webkit-scrollbar": {
     display: "none",

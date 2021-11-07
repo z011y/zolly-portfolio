@@ -47,10 +47,12 @@ const HeaderContainer = styled("div", {
   padding: "$4",
   paddingBottom: "$3",
   borderBottom: "1px solid $border",
+  background: "$header",
+  "-webkit-backdrop-filter": "saturate(180%) blur(5px)",
+  backdropFilter: "saturate(180%) blur(10px)",
 
   "@bp1": {
-    padding: "$5",
-    borderBottom: "none",
+    padding: "$4 $5",
   },
 });
 

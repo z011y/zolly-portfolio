@@ -10,10 +10,13 @@ type FixedButtonProps = {
 
 const FixedButton = ({ text, icon }: FixedButtonProps) => {
   return (
-    <FixedButtonContainer>
-      <ButtonText>{text}</ButtonText>
-      {icon}
-    </FixedButtonContainer>
+    <>
+      <FixedButtonContainer>
+        <ButtonText>{text}</ButtonText>
+        {icon}
+      </FixedButtonContainer>
+      <FixedBackground></FixedBackground>
+    </>
   );
 };
 
@@ -35,7 +38,7 @@ const FixedButtonContainer = styled("div", {
   width: "calc(100vw - 136px)",
 
   "@bp1": {
-    bottom: "64px",
+    bottom: "32px",
     right: "64px",
     width: "256px",
   },
@@ -47,4 +50,19 @@ const ButtonText = styled("div", {
   textTransform: "uppercase",
   color: "white",
   letterSpacing: "0.1em",
+});
+
+const FixedBackground = styled("div", {
+  position: "fixed",
+  bottom: "0",
+  width: "100vw",
+  height: "53px",
+  backgroundColor: "$header",
+  "-webkit-backdrop-filter": "saturate(180%) blur(5px)",
+  backdropFilter: "saturate(180%) blur(10px)",
+  borderTop: "1px solid $border",
+
+  "@bp1": {
+    display: "none",
+  },
 });

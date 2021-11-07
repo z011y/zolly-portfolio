@@ -27,7 +27,7 @@ const Home = () => {
         />
       </Head>
 
-      <div>
+      <Section>
         <h4>Hi 👋 my name is</h4>
         <h1>Cameron Zollinger</h1>
         <h2>
@@ -35,7 +35,17 @@ const Home = () => {
           <span style={{ color: "#0091FF" }}> Software QA Engineer </span>
           with a passion for quality software
         </h2>
-      </div>
+        <h2>
+          Currently at
+          <span style={{ color: "#0091FF" }}> Awardco </span>
+          pushing the bounds of software quality and automation testing
+        </h2>
+      </Section>
+      <Section>
+        <h1>
+          What are you waiting for? <br /> Check out my work!
+        </h1>
+      </Section>
 
       <FixedButton
         text="see my work"
@@ -54,10 +64,18 @@ Home.getLayout = function getLayout(page: ReactElement) {
 const HomePageContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
-  alignItems: "center",
+  height: "100%",
+});
+
+const Section = styled("section", {
+  display: "flex",
+  flexDirection: "column",
   justifyContent: "center",
   height: "100vh",
   paddingLeft: "32px",
   paddingRight: "32px",
-  overflowY: "hidden",
+
+  "@bp1": {
+    paddingLeft: "264px",
+  },
 });

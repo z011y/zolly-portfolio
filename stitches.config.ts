@@ -16,6 +16,7 @@ export const {
       accent: "#EDF6FF",
       background: "#FFF",
       text: "#000",
+      header: "hsla(0, 0%, 100%, 0.66)",
     },
     space: {
       1: "4px",
@@ -55,6 +56,7 @@ export const darkTheme = createTheme({
     accent: "#232323",
     background: "#000",
     text: "#FFF",
+    header: "rgba(0, 0, 0, 0.66)",
   },
 });
 
@@ -99,11 +101,13 @@ export const globalStyles = globalCss({
     letterSpacing: "-1.8px",
     marginBlockStart: 0,
     marginBlockEnd: 0,
+    width: "100%",
   },
   h2: {
     fontSize: theme.fontSizes[4],
     fontWeight: "400",
     lineHeight: "1.2",
+    width: "100%",
   },
   h4: {
     fontSize: theme.fontSizes[3],
@@ -113,6 +117,7 @@ export const globalStyles = globalCss({
     textTransform: "uppercase",
     marginBlockStart: 0,
     marginBlockEnd: 0,
+    width: "100%",
   },
 
   "::selection": {

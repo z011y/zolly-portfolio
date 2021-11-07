@@ -32,7 +32,7 @@ const ThemeToggleContainer = styled("div", {
   bottom: "32px",
   left: "32px",
   cursor: "pointer",
-  zIndex: 2,
+  zIndex: 4,
   backgroundColor: "$accent",
   border: "1px solid $border",
   padding: "8px",
@@ -42,7 +42,7 @@ const ThemeToggleContainer = styled("div", {
   borderRadius: "8px",
 
   "@bp1": {
-    bottom: "64px",
+    bottom: "32px",
     left: "64px",
     backgroundColor: "$background",
     border: "none",

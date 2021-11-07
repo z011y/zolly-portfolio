@@ -66,7 +66,7 @@ const SideBarContainer = styled("div", {
     top: 0,
     left: 0,
     padding: "$5",
-    zIndex: 1,
+    zIndex: 3,
   },
 });
 
