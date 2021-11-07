@@ -9,6 +9,7 @@ import {
   SmileyXEyes,
   ChatTeardrop,
   ChatTeardropText,
+  Article,
 } from "phosphor-react";
 
 import NavLink from "./NavLink";
@@ -39,6 +40,12 @@ const MobileNav = () => {
         text="Hello"
         icon={<ChatTeardropText size="18" />}
         activeIcon={<ChatTeardrop color="#0091FF" weight="fill" size="18" />}
+      />
+      <NavLink
+        href="/blog"
+        text="Blog"
+        icon={<Article size="18" />}
+        activeIcon={<Article color="#0091FF" weight="fill" size="18" />}
       />
     </MobileNavContainer>
   );
