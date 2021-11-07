@@ -65,10 +65,12 @@ export const globalStyles = globalCss({
   html: {
     width: "100%",
     maxWidth: "100%",
+    height: "100vh",
   },
   body: {
     width: "100%",
     maxWidth: "100%",
+    height: "100vh",
     margin: 0,
     fontFamily: theme.fonts.normal,
     backgroundColor: theme.colors.background,
@@ -76,10 +78,12 @@ export const globalStyles = globalCss({
   __next: {
     width: "100%",
     maxWidth: "100%",
+    height: "100vh",
   },
   "__next > div": {
     width: "100%",
     maxWidth: "100%",
+    height: "100vh",
   },
   a: {
     fontFamily: theme.fonts.mono,
@@ -99,9 +103,10 @@ export const globalStyles = globalCss({
   h2: {
     fontSize: theme.fontSizes[4],
     fontWeight: "400",
+    lineHeight: "1.2",
   },
   h4: {
-    fontSize: theme.fontSizes[2],
+    fontSize: theme.fontSizes[3],
     fontWeight: "400",
     fontFamily: "$mono",
     color: theme.colors.primary,

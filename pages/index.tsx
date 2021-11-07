@@ -57,7 +57,7 @@ const HomePageContainer = styled("div", {
   alignItems: "center",
   justifyContent: "center",
   height: "100vh",
-  paddingTop: "121px",
   paddingLeft: "32px",
   paddingRight: "32px",
+  overflowY: "hidden",
 });
