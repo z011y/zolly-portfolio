@@ -31,7 +31,8 @@ const Home = () => {
         <h4>Hi 👋 my name is</h4>
         <h1>Cameron Zollinger</h1>
         <h2>
-          I'm a <span style={{ color: "#0091FF" }}>Software QA Engineer</span>{" "}
+          I&apos;m a
+          <span style={{ color: "#0091FF" }}> Software QA Engineer </span>
           with a passion for quality software
         </h2>
       </div>
