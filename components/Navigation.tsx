@@ -45,6 +45,7 @@ const HeaderContainer = styled("div", {
   alignItems: "center",
   justifyContent: "space-between",
   padding: "$4",
+  paddingBottom: "$3",
   borderBottom: "1px solid $border",
 
   "@bp1": {

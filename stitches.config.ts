@@ -89,6 +89,26 @@ export const globalStyles = globalCss({
     color: theme.colors.text,
     letterSpacing: "0.1em",
   },
+  h1: {
+    fontSize: theme.fontSizes[7],
+    fontWeight: "900",
+    letterSpacing: "-1.8px",
+    marginBlockStart: 0,
+    marginBlockEnd: 0,
+  },
+  h2: {
+    fontSize: theme.fontSizes[4],
+    fontWeight: "400",
+  },
+  h4: {
+    fontSize: theme.fontSizes[2],
+    fontWeight: "400",
+    fontFamily: "$mono",
+    color: theme.colors.primary,
+    textTransform: "uppercase",
+    marginBlockStart: 0,
+    marginBlockEnd: 0,
+  },
 
   "::selection": {
     backgroundColor: theme.colors.primary,

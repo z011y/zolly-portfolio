@@ -1,14 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
 
-import { theme } from "../stitches.config";
+import { styled, theme } from "../stitches.config";
 import Layout from "../components/Layout";
+import FixedButton from "../components/FixedButton";
+
+import { Folder } from "phosphor-react";
 
 import type { ReactElement } from "react";
 
-const Page = () => {
+const Home = () => {
   return (
-    <div>
+    <HomePageContainer>
       <Head>
         <title>zolly</title>
         <meta name="description" content="Cameron Zollinger's portfolio" />
@@ -23,12 +26,37 @@ const Page = () => {
           media="(prefers-color-scheme: dark)"
         />
       </Head>
-    </div>
+
+      <div>
+        <h4>Hi 👋 my name is</h4>
+        <h1>Cameron Zollinger</h1>
+        <h2>
+          I'm a <span style={{ color: "#0091FF" }}>Software QA Engineer</span>{" "}
+          with a passion for quality software
+        </h2>
+      </div>
+
+      <FixedButton
+        text="see my work"
+        icon={<Folder size="24" color="white" />}
+      />
+    </HomePageContainer>
   );
 };
 
-export default Page;
+export default Home;
 
-Page.getLayout = function getLayout(page: ReactElement) {
+Home.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };
+
+const HomePageContainer = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100vh",
+  paddingTop: "121px",
+  paddingLeft: "32px",
+  paddingRight: "32px",
+});
