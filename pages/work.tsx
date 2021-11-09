@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import { styled } from "../stitches.config";
 import PageTitle from "../components/PageTitle";
+import { Warning } from "phosphor-react";
 
 import type { ReactElement } from "react";
 
@@ -8,7 +9,10 @@ const Work = () => {
   return (
     <WorkContainer>
       <PageTitle text="Projects" />
-      <ProjectContainer>project here</ProjectContainer>
+      <ProjectContainer>
+        <Warning size="24" style={{ marginRight: "16px" }} />
+        This page is currently under construction. Try again later!
+      </ProjectContainer>
     </WorkContainer>
   );
 };
@@ -25,7 +29,7 @@ const WorkContainer = styled("div", {
   paddingLeft: "32px",
 
   "@bp1": {
-    paddingTop: "121px",
+    paddingTop: "105px",
   },
 });
 

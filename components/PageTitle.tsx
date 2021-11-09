@@ -21,8 +21,9 @@ const TitleContainer = styled("div", {
   position: "fixed",
   top: "0",
   left: "72px",
-  height: "89px",
+  height: "79px",
   zIndex: "2",
+  paddingTop: "16px",
 
   h1: {
     fontSize: "18px",
@@ -31,7 +32,8 @@ const TitleContainer = styled("div", {
 
   "@bp1": {
     left: "256px",
-    height: "89px",
+    height: "95px",
     paddingLeft: "32px",
+    paddingTop: "0px",
   },
 });

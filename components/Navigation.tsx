@@ -15,8 +15,12 @@ const Navigation = () => {
           height={24}
         />
         <SocialsWrapper>
-          <GithubLogo size="24" />
-          <InstagramLogo size="24" />
+          <a href="https://github.com/zolly-dev" target="_blank">
+            <GithubLogo size="24" />
+          </a>
+          <a href="https://www.instagram.com/zolly_dev/" target="_blank">
+            <InstagramLogo size="24" />
+          </a>
         </SocialsWrapper>
       </HeaderContainer>
 
@@ -53,6 +57,7 @@ const HeaderContainer = styled("div", {
 
   "@bp1": {
     padding: "$4 $5",
+    paddingBottom: "$3",
   },
 });
 
