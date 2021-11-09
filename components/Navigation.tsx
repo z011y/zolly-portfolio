@@ -15,10 +15,18 @@ const Navigation = () => {
           height={24}
         />
         <SocialsWrapper>
-          <a href="https://github.com/zolly-dev" target="_blank">
+          <a
+            href="https://github.com/zolly-dev"
+            target="_blank"
+            rel="noreferrer"
+          >
             <GithubLogo size="24" />
           </a>
-          <a href="https://www.instagram.com/zolly_dev/" target="_blank">
+          <a
+            href="https://www.instagram.com/zolly_dev/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <InstagramLogo size="24" />
           </a>
         </SocialsWrapper>
