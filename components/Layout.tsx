@@ -1,7 +1,8 @@
 import React from "react";
+import { styled } from "../stitches.config";
 
 import Navigation from "./Navigation";
-import SideBar from "./SideBar";
+import SideBar from "./SideBarNav";
 import ThemeToggle from "./ThemeToggle";
 
 type LayoutProps = {
@@ -14,9 +15,18 @@ const Layout = ({ children }: LayoutProps) => {
       <Navigation />
       <SideBar />
       <ThemeToggle />
-      {children}
+      <Main>{children}</Main>
     </div>
   );
 };
 
 export default Layout;
+
+const Main = styled("main", {
+  display: "flex",
+  flexDirection: "column",
+
+  "@bp1": {
+    paddingLeft: "256px",
+  },
+});

@@ -9,12 +9,13 @@ import {
   SmileyXEyes,
   ChatTeardrop,
   ChatTeardropText,
+  Article,
 } from "phosphor-react";
 
 import { styled } from "../stitches.config";
 import NavLink from "./NavLink";
 
-const SideBar = () => {
+const SideBarNav = () => {
   return (
     <SideBarContainer>
       <LinksWrapper>
@@ -34,28 +35,35 @@ const SideBar = () => {
 
         <NavLink
           href="/me"
-          text="me"
+          text="about"
           icon={<Smiley size="24" />}
           activeIcon={<SmileyXEyes color="#0091FF" weight="fill" size="24" />}
         />
 
         <NavLink
           href="/hello"
-          text="hello"
+          text="contact"
           icon={<ChatTeardropText size="24" />}
           activeIcon={<ChatTeardrop color="#0091FF" weight="fill" size="24" />}
+        />
+        <NavLink
+          href="/blog"
+          text="Blog"
+          icon={<Article size="24" />}
+          activeIcon={<Article color="#0091FF" weight="fill" size="24" />}
         />
       </LinksWrapper>
     </SideBarContainer>
   );
 };
 
-export default SideBar;
+export default SideBarNav;
 
 const SideBarContainer = styled("div", {
   display: "none",
 
   "@bp1": {
+    width: "256px",
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
@@ -66,7 +74,7 @@ const SideBarContainer = styled("div", {
     top: 0,
     left: 0,
     padding: "$5",
-    zIndex: 3,
+    zIndex: 1,
   },
 });
 

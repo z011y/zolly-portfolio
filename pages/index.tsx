@@ -50,6 +50,7 @@ const Home = () => {
       <FixedButton
         text="see my work"
         icon={<Folder size="24" color="white" />}
+        link="/work"
       />
     </HomePageContainer>
   );
@@ -75,7 +76,5 @@ const Section = styled("section", {
   paddingLeft: "32px",
   paddingRight: "32px",
 
-  "@bp1": {
-    paddingLeft: "264px",
-  },
+  "@bp1": {},
 });

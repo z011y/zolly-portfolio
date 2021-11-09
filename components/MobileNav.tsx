@@ -31,13 +31,13 @@ const MobileNav = () => {
       />
       <NavLink
         href="/me"
-        text="Me"
+        text="About"
         icon={<Smiley size="18" />}
         activeIcon={<SmileyXEyes color="#0091FF" weight="fill" size="18" />}
       />
       <NavLink
         href="/hello"
-        text="Hello"
+        text="Contact"
         icon={<ChatTeardropText size="18" />}
         activeIcon={<ChatTeardrop color="#0091FF" weight="fill" size="18" />}
       />

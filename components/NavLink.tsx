@@ -42,7 +42,7 @@ const LinkWrapper = styled("div", {
   },
 
   "@bp1": {
-    gridGap: "16px",
+    gridGap: "14px",
     marginRight: "0",
     borderRadius: "8px",
     padding: "0",
@@ -54,7 +54,7 @@ const LinkWrapper = styled("div", {
     },
 
     a: {
-      fontSize: "18px",
+      fontSize: "16px",
     },
   },
 });

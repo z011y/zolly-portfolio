@@ -1,20 +1,24 @@
 import { SunHorizon, MoonStars } from "phosphor-react";
 import React from "react";
+import Link from "next/link";
 
 import { styled } from "../stitches.config";
 
 type FixedButtonProps = {
   text: string;
   icon: React.ReactNode;
+  link: string;
 };
 
-const FixedButton = ({ text, icon }: FixedButtonProps) => {
+const FixedButton = ({ text, icon, link }: FixedButtonProps) => {
   return (
     <>
-      <FixedButtonContainer>
-        <ButtonText>{text}</ButtonText>
-        {icon}
-      </FixedButtonContainer>
+      <Link href={link}>
+        <FixedButtonContainer>
+          <ButtonText>{text}</ButtonText>
+          {icon}
+        </FixedButtonContainer>
+      </Link>
       <FixedBackground></FixedBackground>
     </>
   );
