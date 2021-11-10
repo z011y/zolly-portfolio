@@ -85,6 +85,10 @@ const SnapScrollContainer = styled("div", {
   maxHeight: "100vh",
   overflowY: "scroll",
   scrollSnapType: "y mandatory",
+
+  "&::-webkit-scrollbar": {
+    display: "none",
+  },
 });
 
 const Section = styled("section", {
