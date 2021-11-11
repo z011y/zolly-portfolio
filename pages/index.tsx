@@ -79,6 +79,8 @@ Home.getLayout = function getLayout(page: ReactElement) {
 const HomePageContainer = styled("div", {
   display: "flex",
   flexDirection: "column",
+  height: "100%",
+  overflow: "hidden",
 });
 
 const SnapScrollContainer = styled("div", {
