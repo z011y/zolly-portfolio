@@ -1,7 +1,9 @@
 import Layout from "../components/Layout";
 import { styled } from "../stitches.config";
 import PageTitle from "../components/PageTitle";
-import { Warning } from "phosphor-react";
+import { Warning, FileText } from "phosphor-react";
+import SideBarRight from "../components/SideBarRight";
+import FixedButton from "../components/FixedButton";
 
 import type { ReactElement } from "react";
 
@@ -13,6 +15,12 @@ const Work = () => {
         <Warning size="24" style={{ marginRight: "16px" }} />
         This page is currently under construction. Try again later!
       </ProjectContainer>
+      <SideBarRight />
+      <FixedButton
+        text="resume"
+        icon={<FileText size="24" color="white" />}
+        link="/work"
+      />
     </WorkContainer>
   );
 };

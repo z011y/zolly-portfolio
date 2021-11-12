@@ -43,8 +43,8 @@ const FixedButtonContainer = styled("div", {
 
   "@bp1": {
     bottom: "32px",
-    right: "64px",
-    width: "256px",
+    right: "32px",
+    width: "192px",
   },
 });
 
