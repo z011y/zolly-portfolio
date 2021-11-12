@@ -23,7 +23,7 @@ const SideBarContainer = styled("div", {
   display: "none",
 
   "@bp1": {
-    width: "256px",
+    width: "400px",
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
