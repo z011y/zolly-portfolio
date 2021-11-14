@@ -14,7 +14,7 @@ import {
 import { styled } from "../stitches.config";
 
 const SideBarRight = () => {
-  return <SideBarContainer>sidebar</SideBarContainer>;
+  return <SideBarContainer></SideBarContainer>;
 };
 
 export default SideBarRight;
