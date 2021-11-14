@@ -1,6 +1,7 @@
-import Layout from "../components/Layout";
-import { styled } from "../stitches.config";
 import { Warning } from "phosphor-react";
+
+import { styled } from "../stitches.config";
+import Layout from "../components/Layout";
 import PageTitle from "../components/PageTitle";
 
 import type { ReactElement } from "react";

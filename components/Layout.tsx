@@ -1,8 +1,8 @@
 import React from "react";
-import { styled } from "../stitches.config";
 
-import Navigation from "./Navigation";
-import SideBar from "./SideBarNav";
+import { styled } from "../stitches.config";
+import Navigation from "./navigation/Navigation";
+import SideBar from "./navigation/SideBarNav";
 import ThemeToggle from "./ThemeToggle";
 
 type LayoutProps = {

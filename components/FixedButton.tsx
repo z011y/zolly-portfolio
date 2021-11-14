@@ -1,4 +1,3 @@
-import { SunHorizon, MoonStars } from "phosphor-react";
 import React from "react";
 import Link from "next/link";
 

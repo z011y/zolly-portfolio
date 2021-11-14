@@ -1,5 +1,4 @@
 import { ThemeProvider } from "next-themes";
-import Head from "next";
 
 import { globalStyles, darkTheme } from "../stitches.config";
 

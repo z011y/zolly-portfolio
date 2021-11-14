@@ -1,5 +1,3 @@
-import Link from "next/link";
-import { useState } from "react";
 import {
   House,
   HouseSimple,
@@ -12,7 +10,7 @@ import {
   Article,
 } from "phosphor-react";
 
-import { styled } from "../stitches.config";
+import { styled } from "../../stitches.config";
 import NavLink from "./NavLink";
 
 const SideBarNav = () => {

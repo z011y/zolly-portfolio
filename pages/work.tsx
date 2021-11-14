@@ -1,10 +1,12 @@
-import Layout from "../components/Layout";
-import { styled } from "../stitches.config";
-import PageTitle from "../components/PageTitle";
 import { Warning, FileText } from "phosphor-react";
+
+import { styled } from "../stitches.config";
+import Layout from "../components/Layout";
+import PageTitle from "../components/PageTitle";
 import SideBarRight from "../components/SideBarRight";
 import FixedButton from "../components/FixedButton";
-import ProjectImage from "../components/ProjectImage";
+import ProjectContainer from "../components/projects/ProjectContainer";
+import SnapScrollContainer from "../components/SnapScrollContainer";
 
 import type { ReactElement } from "react";
 
@@ -15,16 +17,28 @@ const Work = () => {
 
       <SnapScrollContainer>
         <Section>
-          <h4 style={{ marginBottom: "16px" }}>
-            CYPRESS-SPELLBOOK <span style={{ color: "white" }}>↗︎</span>
-          </h4>
-          <ProjectImage />
-          <h2 style={{ marginTop: "32px" }}>
-            A collection of custom Cypress commands for common components
-          </h2>
+          <ProjectContainer
+            title="cypress-spellbook"
+            titleLink="/"
+            images={[
+              "https://cgjozolfjraxtassnfqe.supabase.in/storage/v1/object/sign/work_images/samplePink.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ3b3JrX2ltYWdlcy9zYW1wbGVQaW5rLnBuZyIsImlhdCI6MTYzNjgzMTc0NywiZXhwIjoxOTUyMTkxNzQ3fQ.VBC4B_KcRBK3dr9Pod-gF8_YEHZvHlLTDd5HWAe_TPQ",
+              "https://cgjozolfjraxtassnfqe.supabase.in/storage/v1/object/sign/work_images/samplepic.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ3b3JrX2ltYWdlcy9zYW1wbGVwaWMucG5nIiwiaWF0IjoxNjM2ODY5Mjk0LCJleHAiOjE5NTIyMjkyOTR9.T5NlMXttg8JvydA9kS6XV4sjQOOVr4nnV2BU1yKTOtM",
+              "https://cgjozolfjraxtassnfqe.supabase.in/storage/v1/object/sign/work_images/samplePink.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ3b3JrX2ltYWdlcy9zYW1wbGVQaW5rLnBuZyIsImlhdCI6MTYzNjgzMTc0NywiZXhwIjoxOTUyMTkxNzQ3fQ.VBC4B_KcRBK3dr9Pod-gF8_YEHZvHlLTDd5HWAe_TPQ",
+            ]}
+            description="A collection of custom Cypress commands for common components"
+          />
         </Section>
         <Section>
-          <h4>HERBIVORE</h4>
+          <ProjectContainer
+            title="herbivore"
+            titleLink="/"
+            images={[
+              "https://cgjozolfjraxtassnfqe.supabase.in/storage/v1/object/sign/work_images/samplePink.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ3b3JrX2ltYWdlcy9zYW1wbGVQaW5rLnBuZyIsImlhdCI6MTYzNjgzMTc0NywiZXhwIjoxOTUyMTkxNzQ3fQ.VBC4B_KcRBK3dr9Pod-gF8_YEHZvHlLTDd5HWAe_TPQ",
+              "https://cgjozolfjraxtassnfqe.supabase.in/storage/v1/object/sign/work_images/samplepic.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ3b3JrX2ltYWdlcy9zYW1wbGVwaWMucG5nIiwiaWF0IjoxNjM2ODY5Mjk0LCJleHAiOjE5NTIyMjkyOTR9.T5NlMXttg8JvydA9kS6XV4sjQOOVr4nnV2BU1yKTOtM",
+              "https://cgjozolfjraxtassnfqe.supabase.in/storage/v1/object/sign/work_images/samplePink.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJ3b3JrX2ltYWdlcy9zYW1wbGVQaW5rLnBuZyIsImlhdCI6MTYzNjgzMTc0NywiZXhwIjoxOTUyMTkxNzQ3fQ.VBC4B_KcRBK3dr9Pod-gF8_YEHZvHlLTDd5HWAe_TPQ",
+            ]}
+            description="A safari extension that displays if an item is vegan or not"
+          />
         </Section>
       </SnapScrollContainer>
 
@@ -51,23 +65,13 @@ const WorkContainer = styled("div", {
   overflow: "hidden",
 });
 
-const SnapScrollContainer = styled("div", {
-  maxHeight: "100vh",
-  overflowY: "scroll",
-  scrollSnapType: "y mandatory",
-
-  "&::-webkit-scrollbar": {
-    display: "none",
-  },
-});
-
 const Section = styled("section", {
   display: "flex",
   flexDirection: "column",
   height: "100vh",
   scrollSnapAlign: "start",
   paddingLeft: "32px",
-  paddingTop: "159px",
+  paddingTop: "143px",
 
   "@bp1": {
     paddingTop: "105px",

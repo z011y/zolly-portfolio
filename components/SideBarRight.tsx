@@ -29,6 +29,7 @@ const SideBarContainer = styled("div", {
     alignItems: "start",
     justifyContent: "center",
     height: "100%",
+    backgroundColor: "$background",
     borderLeft: "solid 1px $border",
     position: "fixed",
     top: 0,
