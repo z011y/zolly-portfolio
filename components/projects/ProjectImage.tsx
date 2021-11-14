@@ -17,7 +17,7 @@ const ProjectImage = ({ image }: ProjectImageProps) => {
 export default ProjectImage;
 
 const ImageContainer = styled("div", {
-  minWidth: "100vw",
+  minWidth: "calc(100vw - 64px)",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
