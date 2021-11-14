@@ -23,7 +23,6 @@ const ProjectContainer = ({
       <ProjectStack
         stackItems={["cypress", "javascript", "jest", "typescript", "react"]}
       />
-      <ProjectDescription>{description}</ProjectDescription>
     </Container>
   );
 };
@@ -46,9 +45,4 @@ const Container = styled("div", {
 
 const ProjectTitle = styled("h4", {
   marginBottom: "16px",
-});
-
-const ProjectDescription = styled("h2", {
-  marginTop: "16px",
-  maxWidth: "calc(100vw - 32px)",
 });

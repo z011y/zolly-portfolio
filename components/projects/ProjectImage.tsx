@@ -9,7 +9,14 @@ type ProjectImageProps = {
 const ProjectImage = ({ image }: ProjectImageProps) => {
   return (
     <ImageContainer>
-      <Image src={image} alt="project-image" width="512px" height="512px" />
+      <Image
+        src={image}
+        alt="project-image"
+        width="1024px"
+        height="1024px"
+        placeholder="blur"
+        blurDataURL={"data:image/png;base64,c3BlbGxib29rQmx1ci5wbmcK"}
+      />
     </ImageContainer>
   );
 };
@@ -25,8 +32,7 @@ const ImageContainer = styled("div", {
   scrollSnapAlign: "start",
 
   "@bp1": {
-    minWidth: "512px",
-    minHeight: "512px",
+    minWidth: "calc(100vw - 256px - 400px - 192px)",
     scrollMarginLeft: "32px",
   },
 });
