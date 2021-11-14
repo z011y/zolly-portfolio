@@ -1,7 +1,7 @@
 import { GithubLogo, InstagramLogo } from "phosphor-react";
 
-import { styled, theme } from "../stitches.config";
-import Logo from "./Logo";
+import { styled, theme } from "../../stitches.config";
+import Logo from "../Logo";
 import MobileNav from "./MobileNav";
 
 const Navigation = () => {

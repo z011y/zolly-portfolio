@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
+import { Folder } from "phosphor-react";
 
-import { styled, theme } from "../stitches.config";
+import { styled } from "../stitches.config";
 import Layout from "../components/Layout";
 import FixedButton from "../components/FixedButton";
-
-import { Folder } from "phosphor-react";
+import SnapScrollContainer from "../components/SnapScrollContainer";
 
 import type { ReactElement } from "react";
 
@@ -81,16 +80,6 @@ const HomePageContainer = styled("div", {
   flexDirection: "column",
   height: "100%",
   overflow: "hidden",
-});
-
-const SnapScrollContainer = styled("div", {
-  maxHeight: "100vh",
-  overflowY: "scroll",
-  scrollSnapType: "y mandatory",
-
-  "&::-webkit-scrollbar": {
-    display: "none",
-  },
 });
 
 const Section = styled("section", {
