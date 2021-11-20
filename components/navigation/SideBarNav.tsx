@@ -20,61 +20,43 @@ const SideBarNav = () => {
         <NavLink
           href="/"
           text="home"
-          icon={<House size="24" />}
+          icon={<House size="24" color="currentColor" />}
           activeIcon={
-            <HouseSimple
-              color={theme.colors.accentText}
-              weight="fill"
-              size="24"
-            />
+            <HouseSimple color="currentColor" weight="fill" size="24" />
           }
         />
 
         <NavLink
           href="/work"
           text="work"
-          icon={<Folder size="24" />}
+          icon={<Folder size="24" color="currentColor" />}
           activeIcon={
-            <FolderOpen
-              color={theme.colors.accentText}
-              weight="fill"
-              size="24"
-            />
+            <FolderOpen color="currentColor" weight="fill" size="24" />
           }
         />
 
         <NavLink
           href="/me"
           text="about"
-          icon={<Smiley size="24" />}
+          icon={<Smiley size="24" color="currentColor" />}
           activeIcon={
-            <SmileyXEyes
-              color={theme.colors.accentText}
-              weight="fill"
-              size="24"
-            />
+            <SmileyXEyes color="currentColor" weight="fill" size="24" />
           }
         />
 
         <NavLink
           href="/hello"
           text="contact"
-          icon={<ChatTeardropText size="24" />}
+          icon={<ChatTeardropText size="24" color="currentColor" />}
           activeIcon={
-            <ChatTeardrop
-              color={theme.colors.accentText}
-              weight="fill"
-              size="24"
-            />
+            <ChatTeardrop color="currentColor" weight="fill" size="24" />
           }
         />
         <NavLink
           href="/blog"
           text="Blog"
-          icon={<Article size="24" />}
-          activeIcon={
-            <Article color={theme.colors.accentText} weight="fill" size="24" />
-          }
+          icon={<Article size="24" color="currentColor" />}
+          activeIcon={<Article color="currentColor" weight="fill" size="24" />}
         />
       </LinksWrapper>
     </SideBarContainer>

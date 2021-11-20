@@ -16,7 +16,9 @@ const NavLink = ({ href, text, icon, activeIcon }: NavLinkProps) => {
 
   return (
     <Link href={href} passHref>
-      <LinkWrapper>
+      <LinkWrapper
+        css={isActive ? { color: "$accentText" } : { color: "$text" }}
+      >
         {isActive ? activeIcon : icon}
         <LinkText
           css={isActive ? { color: "$accentText" } : { color: "$text" }}

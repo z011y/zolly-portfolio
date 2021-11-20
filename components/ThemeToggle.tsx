@@ -27,7 +27,7 @@ const ThemeToggle = () => {
           disabled={activeTheme === "dark" ? true : false}
           aria-label="Dark theme"
         >
-          <MoonStars size="18" color={theme.colors.text} />
+          <MoonStars size="18" color="currentColor" />
         </ToggleGroupItem>
 
         <ToggleGroupItem
@@ -35,7 +35,7 @@ const ThemeToggle = () => {
           disabled={activeTheme === "dim" ? true : false}
           aria-label="Dim theme"
         >
-          <SunHorizon size="18" color={theme.colors.text} />
+          <SunHorizon size="18" color="currentColor" />
         </ToggleGroupItem>
 
         <ToggleGroupItem
@@ -43,7 +43,7 @@ const ThemeToggle = () => {
           disabled={activeTheme === "light" ? true : false}
           aria-label="Light theme"
         >
-          <Sun size="18" color={theme.colors.text} />
+          <Sun size="18" color="currentColor" />
         </ToggleGroupItem>
       </ToggleGroup>
     </ThemeToggleContainer>
@@ -87,6 +87,7 @@ const ToggleGroupItem = styled(ToggleGroupPrimitive.Item, {
   border: "none",
   backgroundColor: "rgba(0, 0, 0, 0)",
   height: "42px",
+  color: "$text",
 
   "&[data-state=on]": {
     backgroundColor: "$background",
