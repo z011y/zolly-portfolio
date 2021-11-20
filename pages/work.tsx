@@ -8,8 +8,10 @@ import SideBarRight from "../components/SideBarRight";
 import FixedButton from "../components/FixedButton";
 import ProjectContainer from "../components/projects/ProjectContainer";
 import SnapScrollContainer from "../components/SnapScrollContainer";
+import ProjectDialog from "../components/Dialog";
 
 import type { ReactElement } from "react";
+import { isAbsolute } from "path/posix";
 
 const ProjectDescriptionContext = React.createContext("");
 
@@ -55,7 +57,7 @@ const Work = () => {
         <FixedButton
           text="see details"
           icon={<Info size="24" color="white" />}
-          link="/work"
+          isDialog={true}
         />
       </ProjectDescriptionContext.Provider>
     </WorkContainer>

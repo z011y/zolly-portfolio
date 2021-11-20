@@ -1,11 +1,18 @@
 type LogoProps = {
   fillColor: any;
   strokeColor: any;
+  primaryColor: any;
   width: number;
   height: number;
 };
 
-const Logo = ({ fillColor, strokeColor, width, height }: LogoProps) => {
+const Logo = ({
+  fillColor,
+  strokeColor,
+  primaryColor,
+  width,
+  height,
+}: LogoProps) => {
   return (
     <svg
       width={width || 24}
@@ -22,8 +29,8 @@ const Logo = ({ fillColor, strokeColor, width, height }: LogoProps) => {
         fill={fillColor}
         stroke={strokeColor}
       />
-      <circle cx={12} cy={8} r={3} fill="#0091FF" />
-      <circle cx={12} cy={16} r={3} fill="#0091FF" />
+      <circle cx={12} cy={8} r={3} fill={primaryColor} />
+      <circle cx={12} cy={16} r={3} fill={primaryColor} />
     </svg>
   );
 };

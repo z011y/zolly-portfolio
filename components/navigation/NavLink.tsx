@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-import { styled } from "../../stitches.config";
+import { styled, css } from "../../stitches.config";
 
 type NavLinkProps = {
   href: string;
@@ -13,13 +13,16 @@ type NavLinkProps = {
 const NavLink = ({ href, text, icon, activeIcon }: NavLinkProps) => {
   const router = useRouter();
   const isActive = router.pathname === href;
-  const activeStyles = isActive ? { color: "#0091FF" } : {};
 
   return (
     <Link href={href} passHref>
       <LinkWrapper>
         {isActive ? activeIcon : icon}
-        <a style={activeStyles}>{text}</a>
+        <LinkText
+          css={isActive ? { color: "$accentText" } : { color: "$text" }}
+        >
+          {text}
+        </LinkText>
       </LinkWrapper>
     </Link>
   );
@@ -30,16 +33,13 @@ export default NavLink;
 const LinkWrapper = styled("div", {
   display: "grid",
   gridTemplateColumns: "auto 1fr",
+  alignItems: "end",
   gridGap: "4px",
   marginRight: "16px",
   backgroundColor: "$accent",
   border: "1px solid $border",
-  borderRadius: "16px",
+  borderRadius: "8px",
   padding: "4px 8px",
-
-  a: {
-    fontSize: "14px",
-  },
 
   "@bp1": {
     gridGap: "14px",
@@ -48,13 +48,21 @@ const LinkWrapper = styled("div", {
     padding: "0",
     backgroundColor: "$background",
     border: "none",
+    alignItems: "center",
 
     "&:hover": {
       cursor: "pointer",
     },
+  },
+});
 
-    a: {
-      fontSize: "16px",
-    },
+const LinkText = styled("a", {
+  fontSize: "14px",
+  marginBlockStart: "0",
+  marginBlockEnd: "0",
+  lineHeight: "1",
+
+  "@bp1": {
+    fontSize: "16px",
   },
 });

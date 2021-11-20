@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Folder } from "phosphor-react";
 
-import { styled } from "../stitches.config";
+import { styled, theme } from "../stitches.config";
 import Layout from "../components/Layout";
 import FixedButton from "../components/FixedButton";
 import SnapScrollContainer from "../components/SnapScrollContainer";
@@ -31,24 +31,25 @@ const Home = () => {
           <h4>Hi 👋 my name is</h4>
           <h1>Cameron Zollinger</h1>
           <h2>
-            I&apos;m a
-            <span style={{ color: "#0091FF" }}> Software QA Engineer </span>
+            I&apos;m a<AccentText> Software QA Engineer </AccentText>
             with a passion for quality software
           </h2>
           <h2>
             Currently at
             <a href="https://awardco.com" target="_blank" rel="noreferrer">
-              <span
-                style={{
-                  color: "#0091FF",
+              <AccentText
+                css={{
                   fontFamily: "Inter",
                   textTransform: "none",
                   letterSpacing: "0",
+                  "&:hover": {
+                    color: "$primaryHover",
+                  },
                 }}
               >
                 {" "}
                 Awardco{" "}
-              </span>
+              </AccentText>
             </a>
             pushing the bounds of software quality and automation testing
           </h2>
@@ -92,4 +93,8 @@ const Section = styled("section", {
   scrollSnapAlign: "start",
 
   "@bp1": {},
+});
+
+const AccentText = styled("span", {
+  color: "$accentText",
 });

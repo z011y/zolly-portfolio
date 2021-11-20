@@ -11,6 +11,7 @@ const Navigation = () => {
         <Logo
           fillColor={theme.colors.accent}
           strokeColor={theme.colors.border}
+          primaryColor={theme.colors.primary}
           width={24}
           height={24}
         />

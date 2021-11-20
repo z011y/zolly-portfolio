@@ -1,5 +1,7 @@
 import { createStitches } from "@stitches/react";
 
+import { slate, slateDark, blue, blueDark } from "@radix-ui/colors";
+
 export const {
   styled,
   css,
@@ -11,12 +13,24 @@ export const {
 } = createStitches({
   theme: {
     colors: {
-      primary: "#0091FF",
-      border: "#CEE7FE",
-      accent: "#EDF6FF",
-      background: "#FFF",
+      ...slate,
+      ...blue,
+
+      background: "$slate1",
+      backgroundHover: "#fff",
+      accent: "$slate4",
+      accentHover: "$slate5",
+      border: "$slate7",
       text: "#000",
-      header: "hsla(0, 0%, 100%, 0.66)",
+      accentText: "$blue11",
+
+      primary: "$blue9",
+      primaryHover: "$blue10",
+
+      blueBackground: "$blue3",
+      blueBorder: "$blue6",
+
+      header: "rgba(251, 252, 253, 0.66)",
     },
     space: {
       1: "4px",
@@ -51,12 +65,47 @@ export const {
 
 export const darkTheme = createTheme({
   colors: {
-    primary: "#0091FF",
-    border: "#2E2E2E",
-    accent: "#232323",
+    ...slateDark,
+    ...blueDark,
+
     background: "#000",
-    text: "#FFF",
+    backgroundHover: "$slate1",
+    accent: "$slate3",
+    accentHover: "$slate4",
+    border: "$slate6",
+    text: "#fff",
+    accentText: "$blue11",
+
+    primary: "$blue9",
+    primaryHover: "$blue10",
+
+    blueBackground: "$blue1",
+    blueBorder: "$blue4",
+
     header: "rgba(0, 0, 0, 0.66)",
+  },
+});
+
+export const dimTheme = createTheme({
+  colors: {
+    ...slateDark,
+    ...blueDark,
+
+    background: "$slate1",
+    backgroundHover: "$slate2",
+    accent: "$slate4",
+    accentHover: "$slate5",
+    border: "$slate7",
+    text: "#fff",
+    accentText: "$blue11",
+
+    primary: "$blue9",
+    primaryHover: "$blue10",
+
+    blueBackground: "$blue3",
+    blueBorder: "$blue6",
+
+    header: "rgba(21, 23, 24, 0.66)",
   },
 });
 
@@ -76,6 +125,7 @@ export const globalStyles = globalCss({
     margin: 0,
     fontFamily: theme.fonts.normal,
     backgroundColor: theme.colors.background,
+    color: theme.colors.text,
   },
   __next: {
     width: "100%",
@@ -113,7 +163,7 @@ export const globalStyles = globalCss({
     fontSize: theme.fontSizes[3],
     fontWeight: "400",
     fontFamily: "$mono",
-    color: theme.colors.primary,
+    color: theme.colors.accentText,
     textTransform: "uppercase",
     marginBlockStart: 0,
     marginBlockEnd: 0,

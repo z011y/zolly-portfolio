@@ -1,28 +1,53 @@
 import { useTheme } from "next-themes";
-import { SunHorizon, MoonStars } from "phosphor-react";
+import { useState } from "react";
+import { Sun, SunHorizon, MoonStars } from "phosphor-react";
+import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
 
-import { styled } from "../stitches.config";
+import { styled, theme } from "../stitches.config";
 
 const ThemeToggle = () => {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme, systemTheme } = useTheme();
+  const [activeTheme, setActiveTheme] = useState(resolvedTheme);
 
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+  const onThemeChange = (value: string) => {
+    setTheme(value);
+    setActiveTheme(value);
   };
 
-  return (
-    <ThemeToggleContainer onClick={toggleTheme}>
-      {theme === "dark" ? (
-        <SunHorizon size="24" weight="fill" />
-      ) : (
-        <MoonStars size="24" weight="fill" />
-      )}
+  return resolvedTheme ? (
+    <ThemeToggleContainer>
+      <ToggleGroup
+        type="single"
+        defaultValue={resolvedTheme}
+        onValueChange={onThemeChange}
+        aria-label="Theme toggle"
+      >
+        <ToggleGroupItem
+          value="dark"
+          disabled={activeTheme === "dark" ? true : false}
+          aria-label="Dark theme"
+        >
+          <MoonStars size="18" color={theme.colors.text} />
+        </ToggleGroupItem>
+
+        <ToggleGroupItem
+          value="dim"
+          disabled={activeTheme === "dim" ? true : false}
+          aria-label="Dim theme"
+        >
+          <SunHorizon size="18" color={theme.colors.text} />
+        </ToggleGroupItem>
+
+        <ToggleGroupItem
+          value="light"
+          disabled={activeTheme === "light" ? true : false}
+          aria-label="Light theme"
+        >
+          <Sun size="18" color={theme.colors.text} />
+        </ToggleGroupItem>
+      </ToggleGroup>
     </ThemeToggleContainer>
-  );
+  ) : null;
 };
 
 export default ThemeToggle;
@@ -31,21 +56,49 @@ const ThemeToggleContainer = styled("div", {
   position: "fixed",
   bottom: "32px",
   left: "32px",
-  cursor: "pointer",
   zIndex: 2,
-  backgroundColor: "$accent",
-  border: "1px solid $border",
-  padding: "8px",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  borderRadius: "8px",
 
   "@bp1": {
-    bottom: "32px",
     left: "64px",
+  },
+});
+
+const ToggleGroup = styled(ToggleGroupPrimitive.Root, {
+  display: "grid",
+  gridTemplateRows: "1fr 1fr 1fr",
+  width: "42px",
+  height: "128px",
+  borderRadius: "8px",
+  backgroundColor: "$accent",
+  border: "1px solid $border",
+
+  "@bp1": {
+    gridTemplateColumns: "1fr 1fr 1fr",
+    height: "44px",
+    width: "128px",
+  },
+});
+
+const ToggleGroupItem = styled(ToggleGroupPrimitive.Item, {
+  borderRadius: "8px",
+  border: "none",
+  backgroundColor: "rgba(0, 0, 0, 0)",
+  height: "42px",
+
+  "&[data-state=on]": {
     backgroundColor: "$background",
-    border: "none",
-    padding: "0",
+
+    "&:hover": {
+      cursor: "pointer",
+      backgroundColor: "$background",
+    },
+  },
+
+  "&:hover": {
+    cursor: "pointer",
+    backgroundColor: "$accentHover",
   },
 });

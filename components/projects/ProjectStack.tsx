@@ -40,11 +40,12 @@ const ProjectStackContainer = styled("div", {
 
 const ProjectStackItem = styled("div", {
   marginRight: "8px",
-  backgroundColor: "$accent",
-  border: "1px solid $border",
+  backgroundColor: "$blueBackground",
+  border: "1px solid $blueBorder",
+  color: "$accentText",
   borderRadius: "16px",
   padding: "4px 8px",
-  fontSize: "$2",
+  fontSize: "$1",
   fontFamily: "$mono",
   textTransform: "uppercase",
 });

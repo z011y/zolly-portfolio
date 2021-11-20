@@ -1,24 +1,41 @@
 import React from "react";
 import Link from "next/link";
 
+import Dialog, { DialogTrigger } from "./Dialog";
+
 import { styled } from "../stitches.config";
 
 type FixedButtonProps = {
   text: string;
   icon: React.ReactNode;
-  link: string;
+  link?: string;
+  isDialog?: boolean;
 };
 
-const FixedButton = ({ text, icon, link }: FixedButtonProps) => {
+const FixedButton = ({ text, icon, link, isDialog }: FixedButtonProps) => {
   return (
     <>
-      <Link href={link}>
-        <FixedButtonContainer>
-          <ButtonText>{text}</ButtonText>
-          {icon}
-        </FixedButtonContainer>
-      </Link>
-      <FixedBackground></FixedBackground>
+      {isDialog ? (
+        <>
+          <Dialog>
+            <DialogButton>
+              <ButtonText>{text}</ButtonText>
+              {icon}
+            </DialogButton>
+          </Dialog>
+          <FixedBackground></FixedBackground>
+        </>
+      ) : (
+        <>
+          <Link href={link ? link : ""}>
+            <FixedButtonContainer>
+              <ButtonText>{text}</ButtonText>
+              {icon}
+            </FixedButtonContainer>
+          </Link>
+          <FixedBackground></FixedBackground>
+        </>
+      )}
     </>
   );
 };
@@ -39,6 +56,36 @@ const FixedButtonContainer = styled("div", {
   alignItems: "center",
   borderRadius: "8px",
   width: "calc(100vw - 136px)",
+
+  "&:hover": {
+    backgroundColor: "$primaryHover",
+  },
+
+  "@bp1": {
+    bottom: "32px",
+    right: "64px",
+    width: "304px",
+  },
+});
+
+const DialogButton = styled(DialogTrigger, {
+  position: "fixed",
+  bottom: "32px",
+  right: "32px",
+  cursor: "pointer",
+  zIndex: 2,
+  backgroundColor: "$primary",
+  border: "1px solid $primary",
+  padding: "8px 16px",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  borderRadius: "8px",
+  width: "calc(100vw - 136px)",
+
+  "&:hover": {
+    backgroundColor: "$primaryHover",
+  },
 
   "@bp1": {
     bottom: "32px",
