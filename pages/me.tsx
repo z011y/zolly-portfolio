@@ -1,4 +1,4 @@
-import { Warning } from "phosphor-react";
+import { ExclamationTriangleIcon } from "@radix-ui/react-icons";
 
 import { styled } from "../stitches.config";
 import Layout from "../components/Layout";
@@ -10,7 +10,9 @@ const Me = () => {
   return (
     <AboutContainer>
       <PageTitle text="About" />
-      <Warning size="24" style={{ marginRight: "16px" }} />
+      <WarnExclamationTriangleIconing
+        style={{ width: "24px", height: "24px", marginRight: "16px" }}
+      />
       This page is currently under construction. Try again later!
     </AboutContainer>
   );
