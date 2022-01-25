@@ -1,6 +1,6 @@
 import { useTheme } from "next-themes";
 import { useState } from "react";
-import { Sun, SunHorizon, MoonStars } from "phosphor-react";
+import { SunIcon, BlendingModeIcon, MoonIcon } from "@radix-ui/react-icons";
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
 
 import { styled, theme } from "../stitches.config";
@@ -39,7 +39,7 @@ const ThemeToggle = ({
           disabled={activeTheme === "dark" ? true : false}
           aria-label="Dark theme"
         >
-          <MoonStars size="18" color="currentColor" />
+          <MoonIcon style={{ width: "16px", height: "16px" }} />
         </ToggleGroupItem>
 
         <ToggleGroupItem
@@ -47,7 +47,7 @@ const ThemeToggle = ({
           disabled={activeTheme === "dim" ? true : false}
           aria-label="Dim theme"
         >
-          <SunHorizon size="18" color="currentColor" />
+          <BlendingModeIcon style={{ width: "16px", height: "16px" }} />
         </ToggleGroupItem>
 
         <ToggleGroupItem
@@ -55,7 +55,7 @@ const ThemeToggle = ({
           disabled={activeTheme === "light" ? true : false}
           aria-label="Light theme"
         >
-          <Sun size="18" color="currentColor" />
+          <SunIcon style={{ width: "16px", height: "16px" }} />
         </ToggleGroupItem>
       </ToggleGroup>
     </ThemeToggleContainer>
@@ -74,7 +74,8 @@ const ThemeToggleContainer = styled("div", {
   alignItems: "center",
 
   "@bp1": {
-    left: "64px",
+    left: "3rem",
+    bottom: "2.25rem",
   },
 });
 

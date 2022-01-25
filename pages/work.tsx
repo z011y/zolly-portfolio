@@ -1,4 +1,3 @@
-import { Warning, Info } from "phosphor-react";
 import React from "react";
 
 import { styled } from "../stitches.config";
@@ -11,7 +10,7 @@ import SnapScrollContainer from "../components/SnapScrollContainer";
 import ProjectDialog from "../components/Dialog";
 
 import type { ReactElement } from "react";
-import { isAbsolute } from "path/posix";
+import { InfoCircledIcon } from "@radix-ui/react-icons";
 
 const ProjectDescriptionContext = React.createContext("");
 
@@ -56,7 +55,12 @@ const Work = () => {
         <SideBarRight />
         <FixedButton
           text="see details"
-          icon={<Info size="24" color="white" />}
+          icon={
+            <InfoCircledIcon
+              style={{ width: "16px", height: "16px" }}
+              color="white"
+            />
+          }
           isDialog={true}
         />
       </ProjectDescriptionContext.Provider>
@@ -83,9 +87,9 @@ const Section = styled("section", {
   height: "100vh",
   scrollSnapAlign: "start",
   paddingLeft: "32px",
-  paddingTop: "143px",
+  paddingTop: "168px",
 
   "@bp1": {
-    paddingTop: "105px",
+    paddingTop: "calc(4.5rem + 56px)",
   },
 });

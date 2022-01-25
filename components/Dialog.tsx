@@ -1,6 +1,6 @@
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { styled, theme } from "../stitches.config";
-import { X } from "phosphor-react";
+import { Cross1Icon } from "@radix-ui/react-icons";
 
 type DialogProps = DialogPrimitive.DialogProps & {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ const Dialog = ({ children, ...props }: DialogProps) => {
           components
         </DialogPrimitive.Description>
         <Close>
-          <X size="18" />
+          <Cross1Icon style={{ width: "16px", height: "16px" }} />
         </Close>
       </Content>
     </DialogPrimitive.Root>

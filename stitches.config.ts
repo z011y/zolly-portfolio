@@ -1,6 +1,6 @@
 import { createStitches } from "@stitches/react";
 
-import { slate, slateDark, blue, blueDark } from "@radix-ui/colors";
+import { slate, slateDark, blue, blueDark, blackA } from "@radix-ui/colors";
 
 export const {
   styled,
@@ -21,7 +21,7 @@ export const {
       accent: "$slate4",
       accentHover: "$slate5",
       border: "$slate7",
-      text: "#000",
+      text: "$slate12",
       accentText: "$blue11",
 
       primary: "$blue9",
@@ -30,14 +30,14 @@ export const {
       blueBackground: "$blue3",
       blueBorder: "$blue6",
 
-      header: "rgba(251, 252, 253, 0.66)",
+      header: "hsla(206 30.0% 98.8% 0.72)",
     },
     space: {
       1: "4px",
       2: "8px",
-      3: "16px",
+      3: "2.25rem",
       4: "32px",
-      5: "64px",
+      5: "3rem",
       6: "128px",
       7: "256px",
       8: "512px",
@@ -67,36 +67,14 @@ export const darkTheme = createTheme({
   colors: {
     ...slateDark,
     ...blueDark,
-
-    background: "#000",
-    backgroundHover: "$slate1",
-    accent: "$slate3",
-    accentHover: "$slate4",
-    border: "$slate6",
-    text: "#fff",
-    accentText: "$blue11",
-
-    primary: "$blue9",
-    primaryHover: "$blue10",
-
-    blueBackground: "$blue1",
-    blueBorder: "$blue4",
-
-    header: "rgba(0, 0, 0, 0.66)",
-  },
-});
-
-export const dimTheme = createTheme({
-  colors: {
-    ...slateDark,
-    ...blueDark,
+    ...blackA,
 
     background: "$slate1",
     backgroundHover: "$slate2",
-    accent: "$slate4",
-    accentHover: "$slate5",
-    border: "$slate7",
-    text: "#fff",
+    accent: "$slate3",
+    accentHover: "$slate4",
+    border: "$slate6",
+    text: "$slate12",
     accentText: "$blue11",
 
     primary: "$blue9",
@@ -105,7 +83,30 @@ export const dimTheme = createTheme({
     blueBackground: "$blue3",
     blueBorder: "$blue6",
 
-    header: "rgba(21, 23, 24, 0.66)",
+    header: "hsla(200 7.0% 8.8% 0.72)",
+  },
+});
+
+export const dimTheme = createTheme({
+  colors: {
+    ...slateDark,
+    ...blueDark,
+
+    background: "$blue1",
+    backgroundHover: "$blue2",
+    accent: "$blue3",
+    accentHover: "$blue4",
+    border: "$blue6",
+    text: "$slate12",
+    accentText: "$blue11",
+
+    primary: "$blue9",
+    primaryHover: "$blue10",
+
+    blueBackground: "$blue3",
+    blueBorder: "$blue6",
+
+    header: "hsla(212 35.0% 9.2% 0.72)",
   },
 });
 
@@ -160,7 +161,7 @@ export const globalStyles = globalCss({
     width: "100%",
   },
   h4: {
-    fontSize: theme.fontSizes[3],
+    fontSize: theme.fontSizes[2],
     fontWeight: "400",
     fontFamily: "$mono",
     color: theme.colors.accentText,

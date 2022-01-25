@@ -1,15 +1,5 @@
 import Link from "next/link";
 import { useState } from "react";
-import {
-  House,
-  HouseSimple,
-  Folder,
-  FolderOpen,
-  Smiley,
-  SmileyXEyes,
-  ChatTeardrop,
-  ChatTeardropText,
-} from "phosphor-react";
 
 import { styled } from "../stitches.config";
 

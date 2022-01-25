@@ -1,16 +1,12 @@
 import { styled, theme } from "../../stitches.config";
 
 import {
-  House,
-  HouseSimple,
-  Folder,
-  FolderOpen,
-  Smiley,
-  SmileyXEyes,
-  ChatTeardrop,
-  ChatTeardropText,
-  Article,
-} from "phosphor-react";
+  HomeIcon,
+  CrumpledPaperIcon,
+  ChatBubbleIcon,
+  PersonIcon,
+  ReaderIcon,
+} from "@radix-ui/react-icons";
 
 import NavLink from "./NavLink";
 
@@ -20,38 +16,27 @@ const MobileNav = () => {
       <NavLink
         href="/"
         text="Home"
-        icon={<House size="16" color="currentColor" />}
-        activeIcon={
-          <HouseSimple color="currentColor" weight="fill" size="16" />
-        }
+        icon={<HomeIcon style={{ width: "16px", height: "16px" }} />}
       />
       <NavLink
         href="/work"
-        text="Work"
-        icon={<Folder size="16" color="currentColor" />}
-        activeIcon={<FolderOpen color="currentColor" weight="fill" size="16" />}
+        text="Projects"
+        icon={<CrumpledPaperIcon style={{ width: "16px", height: "16px" }} />}
       />
       <NavLink
         href="/me"
         text="About"
-        icon={<Smiley size="16" color="currentColor" />}
-        activeIcon={
-          <SmileyXEyes color="currentColor" weight="fill" size="16" />
-        }
+        icon={<ChatBubbleIcon style={{ width: "16px", height: "16px" }} />}
       />
       <NavLink
         href="/hello"
         text="Contact"
-        icon={<ChatTeardropText size="16" color="currentColor" />}
-        activeIcon={
-          <ChatTeardrop color="currentColor" weight="fill" size="16" />
-        }
+        icon={<PersonIcon style={{ width: "16px", height: "16px" }} />}
       />
       <NavLink
         href="/blog"
         text="Blog"
-        icon={<Article size="16" color="currentColor" />}
-        activeIcon={<Article color="currentColor" weight="fill" size="16" />}
+        icon={<ReaderIcon style={{ width: "16px", height: "16px" }} />}
       />
     </MobileNavContainer>
   );

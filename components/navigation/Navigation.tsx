@@ -1,34 +1,38 @@
-import { GithubLogo, InstagramLogo } from "phosphor-react";
+import { GitHubLogoIcon, CodeSandboxLogoIcon } from "@radix-ui/react-icons";
 
 import { styled, theme } from "../../stitches.config";
 import Logo from "../Logo";
+import LogoText from "../LogoText";
 import MobileNav from "./MobileNav";
 
-const Navigation = () => {
+type NavigationProps = {
+  isMobile: boolean;
+};
+
+const Navigation = ({ isMobile }: NavigationProps) => {
   return (
     <NavigationContainer>
       <HeaderContainer>
-        <Logo
-          fillColor={theme.colors.accent}
-          strokeColor={theme.colors.border}
-          primaryColor={theme.colors.primary}
-          width={24}
-          height={24}
-        />
+        <LogoWrapper>
+          <Logo
+            fillColor={theme.colors.accent}
+            strokeColor={theme.colors.border}
+            primaryColor={theme.colors.primary}
+            width={24}
+            height={24}
+          />
+          {!isMobile ? <LogoText /> : null}
+        </LogoWrapper>
         <SocialsWrapper>
-          <a
-            href="https://github.com/zolly-dev"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GithubLogo size="24" />
+          <a href="https://github.com/z011y" target="_blank" rel="noreferrer">
+            <GitHubLogoIcon style={{ width: "24px", height: "24px" }} />
           </a>
           <a
-            href="https://www.instagram.com/zolly_dev/"
+            href="https://codesandbox.io/u/z011y"
             target="_blank"
             rel="noreferrer"
           >
-            <InstagramLogo size="24" />
+            <CodeSandboxLogoIcon style={{ width: "24px", height: "24px" }} />
           </a>
         </SocialsWrapper>
       </HeaderContainer>
@@ -58,20 +62,31 @@ const HeaderContainer = styled("div", {
   alignItems: "center",
   justifyContent: "space-between",
   padding: "$4",
-  paddingBottom: "$3",
   borderBottom: "1px solid $border",
   background: "$header",
-  "-webkit-backdrop-filter": "saturate(180%) blur(5px)",
-  backdropFilter: "saturate(180%) blur(10px)",
+  "-webkit-backdrop-filter": "saturate(180%) blur(20px)",
+  backdropFilter: "saturate(180%) blur(20px)",
 
   "@bp1": {
-    padding: "$4 $5",
-    paddingBottom: "$3",
+    padding: "$3 $5",
   },
+});
+
+const LogoWrapper = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "auto 1fr",
+  gridGap: "8px",
+  justifyContent: "center",
+  alignItems: "center",
 });
 
 const SocialsWrapper = styled("div", {
   display: "grid",
   gridTemplateColumns: "auto 1fr",
   gridGap: "16px",
+
+  a: {
+    width: "24px",
+    height: "24px",
+  },
 });

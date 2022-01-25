@@ -39,7 +39,7 @@ const Container = styled("div", {
   },
 
   "@bp1": {
-    maxWidth: "calc(100vw - 256px - 400px)",
+    maxWidth: "calc(100vw - 6rem - 128px - 400px)",
   },
 });
 

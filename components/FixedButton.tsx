@@ -56,14 +56,15 @@ const FixedButtonContainer = styled("div", {
   alignItems: "center",
   borderRadius: "8px",
   width: "calc(100vw - 136px)",
+  height: "44px",
 
   "&:hover": {
     backgroundColor: "$primaryHover",
   },
 
   "@bp1": {
-    bottom: "32px",
-    right: "64px",
+    bottom: "2.25rem",
+    right: "3rem",
     width: "304px",
   },
 });
@@ -82,24 +83,23 @@ const DialogButton = styled(DialogTrigger, {
   alignItems: "center",
   borderRadius: "8px",
   width: "calc(100vw - 136px)",
+  height: "44px",
 
   "&:hover": {
     backgroundColor: "$primaryHover",
   },
 
   "@bp1": {
-    bottom: "32px",
-    right: "64px",
+    bottom: "2.25rem",
+    right: "3rem",
     width: "304px",
   },
 });
 
-const ButtonText = styled("div", {
-  fontSize: "14px",
-  fontFamily: "$mono",
-  textTransform: "uppercase",
+const ButtonText = styled("h4", {
   color: "white",
   letterSpacing: "0.1em",
+  width: "fit-content",
 });
 
 const FixedBackground = styled("div", {

@@ -25,7 +25,7 @@ const Logo = ({
         y={0.5}
         width={23}
         height={23}
-        rx={5.5}
+        rx={6}
         fill={fillColor}
         stroke={strokeColor}
       />

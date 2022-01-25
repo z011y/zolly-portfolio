@@ -7,10 +7,9 @@ type NavLinkProps = {
   href: string;
   text: string;
   icon: React.ReactNode;
-  activeIcon: React.ReactNode;
 };
 
-const NavLink = ({ href, text, icon, activeIcon }: NavLinkProps) => {
+const NavLink = ({ href, text, icon }: NavLinkProps) => {
   const router = useRouter();
   const isActive = router.pathname === href;
 
@@ -19,7 +18,7 @@ const NavLink = ({ href, text, icon, activeIcon }: NavLinkProps) => {
       <LinkWrapper
         css={isActive ? { color: "$accentText" } : { color: "$text" }}
       >
-        {isActive ? activeIcon : icon}
+        {icon}
         <LinkText
           css={isActive ? { color: "$accentText" } : { color: "$text" }}
         >
@@ -36,7 +35,7 @@ const LinkWrapper = styled("div", {
   display: "grid",
   gridTemplateColumns: "auto 1fr",
   alignItems: "end",
-  gridGap: "4px",
+  gridGap: "8px",
   marginRight: "16px",
   backgroundColor: "$accent",
   border: "1px solid $border",
@@ -63,8 +62,4 @@ const LinkText = styled("a", {
   marginBlockStart: "0",
   marginBlockEnd: "0",
   lineHeight: "1",
-
-  "@bp1": {
-    fontSize: "16px",
-  },
 });

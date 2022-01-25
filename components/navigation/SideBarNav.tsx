@@ -1,14 +1,10 @@
 import {
-  House,
-  HouseSimple,
-  Folder,
-  FolderOpen,
-  Smiley,
-  SmileyXEyes,
-  ChatTeardrop,
-  ChatTeardropText,
-  Article,
-} from "phosphor-react";
+  HomeIcon,
+  CrumpledPaperIcon,
+  ChatBubbleIcon,
+  PersonIcon,
+  ReaderIcon,
+} from "@radix-ui/react-icons";
 
 import { styled, theme } from "../../stitches.config";
 import NavLink from "./NavLink";
@@ -20,43 +16,30 @@ const SideBarNav = () => {
         <NavLink
           href="/"
           text="home"
-          icon={<House size="24" color="currentColor" />}
-          activeIcon={
-            <HouseSimple color="currentColor" weight="fill" size="24" />
-          }
+          icon={<HomeIcon style={{ width: "16px", height: "16px" }} />}
         />
 
         <NavLink
           href="/work"
-          text="work"
-          icon={<Folder size="24" color="currentColor" />}
-          activeIcon={
-            <FolderOpen color="currentColor" weight="fill" size="24" />
-          }
+          text="projects"
+          icon={<CrumpledPaperIcon style={{ width: "16px", height: "16px" }} />}
         />
 
         <NavLink
           href="/me"
           text="about"
-          icon={<Smiley size="24" color="currentColor" />}
-          activeIcon={
-            <SmileyXEyes color="currentColor" weight="fill" size="24" />
-          }
+          icon={<PersonIcon style={{ width: "16px", height: "16px" }} />}
         />
 
         <NavLink
           href="/hello"
           text="contact"
-          icon={<ChatTeardropText size="24" color="currentColor" />}
-          activeIcon={
-            <ChatTeardrop color="currentColor" weight="fill" size="24" />
-          }
+          icon={<ChatBubbleIcon style={{ width: "16px", height: "16px" }} />}
         />
         <NavLink
           href="/blog"
           text="Blog"
-          icon={<Article size="24" color="currentColor" />}
-          activeIcon={<Article color="currentColor" weight="fill" size="24" />}
+          icon={<ReaderIcon style={{ width: "16px", height: "16px" }} />}
         />
       </LinksWrapper>
     </SideBarContainer>
@@ -69,7 +52,6 @@ const SideBarContainer = styled("div", {
   display: "none",
 
   "@bp1": {
-    width: "256px",
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
@@ -87,8 +69,8 @@ const SideBarContainer = styled("div", {
 const LinksWrapper = styled("div", {
   display: "grid",
   gridTemplateColumns: "1fr",
-  gridGap: "16px",
-  width: "100%",
+  gridGap: "24px",
+  width: "128px",
   alignItems: "start",
   justifyContent: "start",
 });

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Folder } from "phosphor-react";
+import { CrumpledPaperIcon } from "@radix-ui/react-icons";
 
 import { styled, theme } from "../stitches.config";
 import Layout from "../components/Layout";
@@ -32,10 +32,7 @@ const Home = () => {
           <h1>Cameron Zollinger</h1>
           <h2>
             I&apos;m a<AccentText> Software Test Engineer </AccentText>
-            with a passion for quality software
-          </h2>
-          <h2>
-            Currently at
+            with a passion for quality software. Currently at
             <a href="https://awardco.com" target="_blank" rel="noreferrer">
               <AccentText
                 css={{
@@ -63,7 +60,12 @@ const Home = () => {
 
       <FixedButton
         text="see my work"
-        icon={<Folder size="24" color="white" />}
+        icon={
+          <CrumpledPaperIcon
+            style={{ width: "16px", height: "16px" }}
+            color="white"
+          />
+        }
         link="/work"
       />
     </HomePageContainer>
@@ -91,8 +93,24 @@ const Section = styled("section", {
   paddingLeft: "32px",
   paddingRight: "32px",
   scrollSnapAlign: "start",
+  textAlign: "center",
+  alignItems: "center",
+  borderBottom: "solid 1px $border",
 
-  "@bp1": {},
+  h2: {
+    lineHeight: "1.5",
+  },
+
+  "@bp1": {
+    h1: {
+      fontSize: "64px",
+      letterSpacing: "-4px",
+    },
+
+    h2: {
+      width: "40vw",
+    },
+  },
 });
 
 const AccentText = styled("span", {

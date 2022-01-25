@@ -20,7 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div>
-      <Navigation />
+      <Navigation isMobile={isMobile} />
       <SideBar />
       <ThemeToggle
         triggerIsOpen={triggerIsOpen}
@@ -45,6 +45,6 @@ const Main = styled("main", {
   flexDirection: "column",
 
   "@bp1": {
-    paddingLeft: "256px",
+    paddingLeft: "calc(6rem + 128px)",
   },
 });
