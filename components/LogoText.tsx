@@ -29,8 +29,8 @@ const LogoText = () => {
         fill="currentColor"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M15.1583 4.80875L12.8622 10.352L11.9291 9.96552L14.2252 4.42224L15.1583 4.80875Z"
         fill="currentColor"
       />

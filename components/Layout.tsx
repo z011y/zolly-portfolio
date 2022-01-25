@@ -15,8 +15,12 @@ const Layout = ({ children }: LayoutProps) => {
   const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 415);
-  });
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 415);
+    };
+
+    window.addEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div>
