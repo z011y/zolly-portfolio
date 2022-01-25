@@ -9,14 +9,7 @@ type ProjectImageProps = {
 const ProjectImage = ({ image }: ProjectImageProps) => {
   return (
     <ImageContainer>
-      <Image
-        src={image}
-        alt="project-image"
-        width="1024px"
-        height="1024px"
-        placeholder="blur"
-        blurDataURL={"data:image/png;base64,c3BlbGxib29rQmx1ci5wbmcK"}
-      />
+      <Image src={image} alt="project-image" width="1024px" height="1024px" />
     </ImageContainer>
   );
 };

@@ -5,16 +5,28 @@ import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group";
 
 import { styled, theme } from "../stitches.config";
 
-const ThemeToggle = () => {
+type ThemeToggleProps = {
+  triggerIsOpen: boolean;
+  setTriggerIsOpen: Function;
+  isMobile: boolean;
+};
+
+const ThemeToggle = ({
+  triggerIsOpen,
+  setTriggerIsOpen,
+  isMobile,
+}: ThemeToggleProps) => {
   const { resolvedTheme, setTheme, systemTheme } = useTheme();
   const [activeTheme, setActiveTheme] = useState(resolvedTheme);
 
   const onThemeChange = (value: string) => {
     setTheme(value);
     setActiveTheme(value);
+    isMobile ? setTriggerIsOpen(!triggerIsOpen) : null;
   };
 
-  return resolvedTheme ? (
+  return (resolvedTheme && !isMobile) ||
+    (resolvedTheme && isMobile && triggerIsOpen) ? (
     <ThemeToggleContainer>
       <ToggleGroup
         type="single"
@@ -69,7 +81,6 @@ const ThemeToggleContainer = styled("div", {
 const ToggleGroup = styled(ToggleGroupPrimitive.Root, {
   display: "grid",
   gridTemplateRows: "1fr 1fr 1fr",
-  width: "42px",
   height: "128px",
   borderRadius: "8px",
   backgroundColor: "$accent",
@@ -87,6 +98,7 @@ const ToggleGroupItem = styled(ToggleGroupPrimitive.Item, {
   border: "none",
   backgroundColor: "rgba(0, 0, 0, 0)",
   height: "42px",
+  width: "42px",
   color: "$text",
 
   "&[data-state=on]": {

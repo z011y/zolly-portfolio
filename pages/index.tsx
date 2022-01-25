@@ -31,7 +31,7 @@ const Home = () => {
           <h4>Hi 👋 my name is</h4>
           <h1>Cameron Zollinger</h1>
           <h2>
-            I&apos;m a<AccentText> Software QA Engineer </AccentText>
+            I&apos;m a<AccentText> Software Test Engineer </AccentText>
             with a passion for quality software
           </h2>
           <h2>

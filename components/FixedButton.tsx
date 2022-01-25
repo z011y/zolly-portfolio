@@ -27,7 +27,7 @@ const FixedButton = ({ text, icon, link, isDialog }: FixedButtonProps) => {
         </>
       ) : (
         <>
-          <Link href={link ? link : ""}>
+          <Link href={link ? link : ""} passHref>
             <FixedButtonContainer>
               <ButtonText>{text}</ButtonText>
               {icon}
