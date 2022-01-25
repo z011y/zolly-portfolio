@@ -10,7 +10,7 @@ const Me = () => {
   return (
     <AboutContainer>
       <PageTitle text="About" />
-      <WarnExclamationTriangleIconing
+      <ExclamationTriangleIcon
         style={{ width: "24px", height: "24px", marginRight: "16px" }}
       />
       This page is currently under construction. Try again later!
